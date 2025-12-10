@@ -1,0 +1,125 @@
+/* --- RESET --- */
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #0a0a0a; color: #e0e0e0; line-height:1.6; }
+
+/* --- HEADER --- */
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 3rem;
+  background: linear-gradient(120deg,#111,#1a1a1a,#111);
+  box-shadow: 0 4px 15px rgba(0,191,255,0.7);
+  position: sticky; top:0; z-index:100;
+}
+.logo {
+  font-size:2rem; font-weight:bold;
+  background: linear-gradient(90deg,#00bfff,#7289da,#00ffea);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  text-shadow:0 0 10px #00bfff;
+}
+
+/* --- NAV --- */
+nav ul { list-style:none; display:flex; gap:1.8rem; }
+nav ul li a {
+  position:relative; text-decoration:none; color:#e0e0e0;
+  padding:0.5rem 1rem; border-radius:8px; font-weight:500; transition:0.3s;
+}
+nav ul li a::after {
+  content:""; position:absolute; width:0; height:3px; left:0; bottom:0;
+  background: linear-gradient(90deg,#00bfff,#7289da,#00ffea); transition:0.3s;
+}
+nav ul li a:hover::after { width:100%; } 
+nav ul li a:hover { color:#00bfff; }
+
+/* --- DISCORD BUTTON --- */
+.discord-btn {
+  background: linear-gradient(45deg,#7289da,#00bfff,#00ffea);
+  color:#fff!important; padding:0.8rem 2rem; border-radius:50px; font-weight:bold;
+  transition:0.3s; display:inline-block;
+}
+.discord-btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00bfff,0 0 40px #7289da;
+}
+
+/* --- SECTIONS --- */
+section { padding:5rem 2rem; text-align:center; margin:2rem auto; border-radius:15px; max-width:1000px; }
+.hero, .about, .rules, .apply, .staff, .map {
+  background: linear-gradient(120deg,#111,#1a1a1a,#222); 
+  box-shadow:0 10px 25px rgba(0,191,255,0.2);
+}
+
+/* Hero */
+.hero h1 {
+  font-size:3rem;
+  background: linear-gradient(90deg,#00bfff,#7289da,#00ffea);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  text-shadow:0 0 20px #00bfff,0 0 30px #7289da; margin-bottom:1rem;
+}
+.hero p { font-size:1.3rem; margin-bottom:2rem; color:#ccc; }
+
+/* About / Rules / Apply */
+.about h2, .rules h2, .apply h2, .staff h2, .map h2 {
+  font-size:2rem;
+  background: linear-gradient(90deg,#00bfff,#7289da,#00ffea);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:1rem;
+}
+.rules ul { list-style:disc; text-align:left; padding-left:2rem; color:#ccc; }
+
+/* Apply gomb */
+.apply a.discord-btn {
+  background: linear-gradient(45deg,#00bfff,#7289da,#00ffea);
+  color:#fff!important;
+  padding:1rem 2rem;
+  border-radius:50px;
+  font-weight:bold;
+  transition:0.3s;
+  display:inline-block;
+}
+.apply a.discord-btn:hover {
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00bfff,0 0 40px #7289da;
+}
+
+/* Staff Section */
+.staff .team {
+  display:flex; justify-content:center; flex-wrap:wrap; gap:2.5rem; perspective:1200px; margin-top:2rem;
+}
+.staff .member {
+  position:relative; width:220px; height:280px;
+  background: linear-gradient(145deg,#111,#1a1a1a,#222);
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,191,255,0.3);
+  transition:transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  cursor:pointer; overflow:hidden;
+}
+.staff .member:hover {
+  transform: scale(1.25) translateY(-25px);
+  box-shadow: 0 20px 50px rgba(0,191,255,0.7);
+  z-index:10;
+  background: linear-gradient(145deg,#1a1a1a,#00bfff,#7289da);
+}
+.staff .member .info {
+  position:absolute; bottom:-100%; left:0; width:100%; padding:1rem;
+  background: rgba(0,0,0,0.85); color:#e0e0e0; transition: bottom 0.4s ease, background 0.4s ease;
+  text-align:center;
+}
+.staff .member:hover .info { bottom:0; }
+.staff .member .info h3 {
+  font-size:1.5rem; margin-bottom:0.5rem;
+  background: linear-gradient(90deg,#00bfff,#7289da,#00ffea);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+.staff .member .info p { font-size:0.95rem; color:#ccc; }
+
+/* Map Placeholder */
+.map .map-placeholder {
+  background: linear-gradient(120deg,#111,#1a1a1a,#222);
+  height:350px; margin-top:2rem; border-radius:15px;
+  display:flex; justify-content:center; align-items:center; color:#666; font-size:1.2rem;
+}
+
+/* Footer */
+footer { padding:2rem; text-align:center; color:#555; }
